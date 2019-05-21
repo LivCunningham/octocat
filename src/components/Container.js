@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 class Container extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="containerCats">
         <img className="image-area" src={this.props.pictureUrl} />

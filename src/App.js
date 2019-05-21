@@ -12,28 +12,22 @@ const Containers = [
 
 class App extends Component {
   render() {
+    console.log('here')
     return (
       <>
         <NavBar />
-        <Container>
-          <div className="containerCats">
-            <Container
-              name="Octobi Wan Catnobi"
-              number="#3"
-              pictureUrl="https://octodex.github.com/images/octobiwan.jpg"
-            />
-            />
-            {Containers.map(Container => {
-              return (
-                <Container
-                  name={Container.name}
-                  number={Container.number}
-                  pictureUrl={Container.imageURL}
-                />
-              )
-            })}
-          </div>
-        </Container>
+
+        <div className="containerCats">
+          {Containers.map(cat => {
+            return (
+              <Container
+                name={cat.name}
+                number={cat.number}
+                pictureUrl={cat.pictureUrl}
+              />
+            )
+          })}
+        </div>
       </>
     )
   }
